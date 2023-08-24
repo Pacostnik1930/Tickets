@@ -12,9 +12,12 @@ function searchTickets() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Обработка ответа от сервера
             var response = xhr.responseText;
-            // Делайте что-то с полученным результатом
+            
+            
         }
     };
     
     xhr.send();
+   
 }
+

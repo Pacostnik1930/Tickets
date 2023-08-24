@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         echo "Место отправления: " . $row["source"]. "<br>";
         echo "Дата отправления: " . $row["date"]. "<br>"; 
         echo "Время отправления: " . $row["time"]. "<br>";       
-        // и так далее
+        
     }
 } else {
     
@@ -47,8 +47,22 @@ $conn->close();
 <head>
     <title>Поиск билетов</title>
     <script src="search_tickets.js"></script>
+    <style>
+       body{
+       background-image: url("1.jpg");
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       }
+       #result-container{
+        width: 500px;
+        margin: 0;
+        background-color: aqua;
+       }
+        </style>
 </head>
 <body>
+       <div id="result-container"></div>
     <h1>Поиск билетов</h1>
     <form method="GET" action="search_tickets.php" onsubmit="searchTickets(); return false;">
         <label for="source">Откуда:</label>
